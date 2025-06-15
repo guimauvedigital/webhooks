@@ -6,7 +6,7 @@ Simple messaging webhooks for easy alerting & monitoring in your applications.
 
 ```kotlin
 dependencies {
-    implementation("digital.guimauve.webhooks:discord:1.0.0")
+    implementation("digital.guimauve.webhooks:discord:1.0.1")
 }
 ```
 

@@ -11,6 +11,7 @@ import io.ktor.serialization.kotlinx.json.*
 class SendDiscordWebhookUseCase : ISendDiscordWebhookUseCase {
 
     val client = HttpClient {
+        expectSuccess = true
         install(ContentNegotiation) {
             json(Serialization.json)
         }
