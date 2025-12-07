@@ -82,8 +82,32 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
-                api(libs.kaccelero.core)
                 implementation(libs.bundles.ktor.client.api)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.java)
+            }
+        }
+        val appleMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
+        }
+        val linuxMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.curl)
+            }
+        }
+        val jsMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.js)
+            }
+        }
+        val mingwMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.winhttp)
             }
         }
         val jvmTest by getting {

@@ -6,13 +6,13 @@ Simple messaging webhooks for easy alerting & monitoring in your applications.
 
 ```kotlin
 dependencies {
-    implementation("digital.guimauve.webhooks:discord:1.0.2")
+    implementation("digital.guimauve.webhooks:discord:1.1.0")
 }
 ```
 
 ```kotlin
-val sendDiscordWebhookUseCase = SendDiscordWebhookUseCase()
-sendDiscordWebhookUseCase("<your webhook url>") {
+val discordWebhookService = DiscordWebhookServiceImpl()
+discordWebhookService.send("<your webhook url>") {
     username = "Kotlin Bot"
     avatarUrl = "..."
     content = "Hello from Kotlin!"
