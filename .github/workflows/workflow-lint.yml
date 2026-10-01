@@ -1,0 +1,11 @@
+name: Workflow lint
+on:
+  pull_request:
+    paths: [ '.github/workflows/**' ]
+permissions:
+  contents: read
+jobs:
+  workflow-lint:
+    uses: guimauvedigital/controlresell-ci/.github/workflows/workflow-lint.yml@v1
+    with:
+      fail_on_error: false
